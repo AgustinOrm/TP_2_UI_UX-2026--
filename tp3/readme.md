@@ -1,0 +1,2 @@
+Durante la primera mitad del trabajo desarrollé el código por mi cuenta y tomé las decisiones de diseño por preferencia propia, sobre todo el tono del texto, media utilizada y los colores.
+A partir de la segunda mitad, empecé a depender más de LLM por limitaciones de tiempo. Utilizando Claude y Google Gimini.

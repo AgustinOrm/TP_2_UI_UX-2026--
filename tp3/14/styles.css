@@ -1,0 +1,168 @@
+:root {
+    --color-primario: rgb(125, 39, 206);
+    --color-secundario: rgb(82, 26, 134);
+    --color-texto: rgb(45, 15, 73);
+    --color-texto-secundario: rgba(82, 26, 134, 0.7);
+    --color-fondo: linear-gradient(270deg, rgba(200, 143, 207, 0.651), rgba(145, 152, 229, 0.596));
+    --color-fondo-form: rgba(255, 255, 255, 0.92);
+    --color-fondo-input: rgb(249, 247, 252);
+    --color-borde: rgba(125, 39, 206, 0.3);
+    --espaciado: 20px;
+    --radio-borde: 8px;
+    --fuente-principal: Arial, Helvetica, sans-serif;
+    --fuente-titulos: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* modo oscuro */
+:root.dark-mode,
+body.dark-mode {
+    --color-primario: rgb(178, 102, 255);
+    --color-secundario: rgb(194, 152, 235);
+    --color-texto: #f3ecf8;
+    --color-texto-secundario: #bda7d9;
+    --color-fondo: linear-gradient(270deg, #1f132b, #13172e);
+    --color-fondo-form: rgba(30, 22, 44, 0.95);
+    --color-fondo-input: #2c1e40;
+    --color-borde: rgba(185, 120, 240, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primario: rgb(178, 102, 255);
+        --color-secundario: rgb(194, 152, 235);
+        --color-texto: #f3ecf8;
+        --color-texto-secundario: #bda7d9;
+        --color-fondo: linear-gradient(270deg, #1f132b, #13172e);
+        --color-fondo-form: rgba(30, 22, 44, 0.95);
+        --color-fondo-input: #2c1e40;
+        --color-borde: rgba(185, 120, 240, 0.4);
+    }
+}
+
+body {
+    background: var(--color-fondo);
+    line-height: 1.5;
+    padding: var(--espaciado);
+    font-family: var(--fuente-principal);
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 38px;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+    font-family: var(--fuente-titulos);
+}
+
+header p {
+    font-size: 18px;
+    color: var(--color-texto);
+    margin: 0;
+}
+
+/* formulario */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--color-fondo-form);
+    border: 2px solid var(--color-borde);
+    border-radius: calc(var(--radio-borde) * 1.5);
+    padding: 30px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(82, 26, 134, 0.15);
+    box-sizing: border-box;
+}
+
+form>div {
+    margin-bottom: var(--espaciado);
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin-bottom: 6px;
+}
+
+span {
+    display: block;
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+    margin-top: 5px;
+}
+
+/* inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo-input);
+    border: 2px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* :focus, transición suave */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    background-color: var(--color-fondo-form);
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 4px rgba(125, 39, 206, 0.22);
+}
+
+textarea:focus {
+    background-color: var(--color-fondo-form);
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 4px rgba(82, 26, 134, 0.22);
+}
+
+/* :hover y :active */
+button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--fuente-principal);
+    color: #ffffff;
+    background-color: var(--color-primario);
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(125, 39, 206, 0.25);
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(82, 26, 134, 0.35);
+}
+
+button[type="submit"]:active {
+    background-color: rgb(55, 12, 95);
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 2px 5px rgba(82, 26, 134, 0.25);
+}

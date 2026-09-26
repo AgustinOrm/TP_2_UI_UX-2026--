@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/gif" href="../media/favicon.gif">
+  <link rel="stylesheet" href="styles.css" />
+  <title>El jarwer (ej. 20)</title>
+</head>
+
+<body>
+
+  <!-- navbar fija -->
+  <header class="navbar-fija">
+    <nav class="navbar">
+      <a href="#inicio" class="logo">el harwauarae</a>
+
+      <!-- checkbox oculto y label asociado (accesibilidad), heredado del ej. 17 -->
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Abrir o cerrar menú de navegación">
+      <label for="menu-toggle" class="menu-icono" aria-label="Menú">☰</label>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">inicio</a></li>
+        <li><a href="#servicios">servicios</a></li>
+        <li><a href="#productos">productos</a></li>
+        <li><a href="#testimonios">testimonios</a></li>
+        <li><a href="#contacto">contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- hero con imagen de fondo -->
+    <section id="inicio" class="hero">
+      <div class="hero-contenido">
+        <h1>EL jardgüeuer</h1>
+        <h2>la parte dura de la computadora, al mejor precio</h2>
+        <p>Armamos, actualizamos y asesoramos sobre tu próxima PC.</p>
+        <a href="#productos" class="btn btn-hero">Ver productos</a>
+      </div>
+      <figure class="hero-imagen">
+        <img src="../media/imagen.gif" alt="Daitaku Helios del videojuego Umamusume: Pretty Derby" width="200">
+      </figure>
+    </section>
+
+    <!-- servicios: grid + flex combinados -->
+    <section id="servicios" class="seccion-servicios">
+      <h2>Nuestros servicios</h2>
+      <div class="grid-servicios">
+        <div class="card-servicio">
+          <span class="tag">Armado</span>
+          <p>Armamos tu PC a medida, componente por componente.</p>
+        </div>
+        <div class="card-servicio">
+          <span class="tag">Mantenimiento</span>
+          <p>Limpieza interna, cambio de pasta térmica y diagnóstico de fallas.</p>
+        </div>
+        <div class="card-servicio">
+          <span class="tag">Asesoramiento</span>
+          <p>Te ayudamos a elegir los componentes según tu presupuesto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- productos: grid + flex combinados -->
+    <section id="productos" class="seccion-productos">
+      <h2>Productos destacados</h2>
+      <div class="grid-productos">
+
+        <article class="card-producto">
+          <img src="../media/astgenne.gif" alt="Procesador Intel Core i12" class="producto-img">
+          <h3 class="producto-titulo">Procesador Intel Core i12</h3>
+          <p class="producto-precio">$Mucho</p>
+          <button type="button" class="btn-comprar">Comprar</button>
+        </article>
+
+        <article class="card-producto">
+          <img src="../media/astgenne.gif" alt="Memoria RAM 67GB DDR9" class="producto-img">
+          <h3 class="producto-titulo">Memoria RAM 67GB DDR9</h3>
+          <p class="producto-precio">$Un ojo de la cara</p>
+          <button type="button" class="btn-comprar">Comprar</button>
+        </article>
+
+        <article class="card-producto">
+          <img src="../media/astgenne.gif" alt="Placa de video RTX 9090" class="producto-img">
+          <h3 class="producto-titulo">Placa de video RTX 9090</h3>
+          <p class="producto-precio">$Los dos ojos de la cara</p>
+          <button type="button" class="btn-comprar">Comprar</button>
+        </article>
+
+        <article class="card-producto">
+          <img src="../media/astgenne.gif" alt="Disco SSD NVMe 420TB" class="producto-img">
+          <h3 class="producto-titulo">Disco SSD NVMe 420TB</h3>
+          <p class="producto-precio">$Bastante</p>
+          <button type="button" class="btn-comprar">Comprar</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- testimonios: carrusel con scroll-snap -->
+    <section id="testimonios" class="seccion-testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="carrusel-testimonios">
+
+        <blockquote class="testimonio">
+          <p>"Mi PC nunca había andado tan bien... hasta que le puse una RTX 9090."</p>
+          <footer>— Cliente satisfecho</footer>
+        </blockquote>
+
+        <blockquote class="testimonio">
+          <p>"El asesoramiento fue clave: terminé gastando el doble de lo pensado, pero valió cada peso."</p>
+          <footer>— Gamer arrepentido de su billetera</footer>
+        </blockquote>
+
+        <blockquote class="testimonio">
+          <p>"Vine por una limpieza y salí con una placa de video nueva. No sé cómo pasó."</p>
+          <footer>— Cliente confundido</footer>
+        </blockquote>
+
+        <blockquote class="testimonio">
+          <p>"420TB de almacenamiento y sigo sin saber dónde guardar mis memes."</p>
+          <footer>— Coleccionista digital</footer>
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- contacto -->
+    <section id="contacto" class="seccion-contacto">
+      <h2>Contacto</h2>
+      <form action="#" method="post" novalidate class="form-contacto">
+
+        <div>
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej.: Élver Gómez Torba" required
+            autocomplete="name" />
+          <span class="ayuda">Ingresá tu nombre y apellido.</span>
+        </div>
+
+        <div>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="correo@falso.com" required
+            autocomplete="email" />
+          <span class="ayuda">Usaremos este correo solo para responderte.</span>
+        </div>
+
+        <div>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribí tu consulta aquí..."
+            required></textarea>
+          <span class="ayuda">Mínimo 20 caracteres.</span>
+        </div>
+
+        <div>
+          <button type="submit">Enviar mensaje</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- footer: grid + flex combinados -->
+  <footer class="footer-landing">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <p class="logo">el harwauarae</p>
+        <p class="footer-texto">la parte dura de la computadora.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>enlaces</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">inicio</a></li>
+          <li><a href="#servicios">servicios</a></li>
+          <li><a href="#productos">productos</a></li>
+          <li><a href="#contacto">contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>seguinos</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="footer-copy">&copy; 2026 hel arwauarwur</p>
+  </footer>
+
+  <!-- botón fijo "volver arriba", heredado del ej. 12 -->
+  <a href="#inicio" class="btn-volver-arriba" aria-label="Volver al inicio de la página">⬆︎</a>
+
+</body>
+
+</html>

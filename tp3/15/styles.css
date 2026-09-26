@@ -1,0 +1,560 @@
+body {
+    background: linear-gradient(270deg, rgba(200, 143, 207, 0.651), rgba(145, 152, 229, 0.596));
+    line-height: 1.5;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(125, 39, 206);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    color: rgb(82, 26, 134);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(45, 15, 73);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* imagen */
+figure {
+
+    text-align: center;
+}
+
+.picmain {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 10px 10px 50px rgba(0, 248, 33, 0.767);
+}
+
+/* ej. 6 - selector de clase */
+
+.card {
+    box-sizing: border-box;
+    width: 350px;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid rgba(125, 39, 206, 0.25);
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 197, 197, 0.26);
+}
+
+.tag {
+
+    background-color: rgb(125, 39, 206);
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* selector descendente */
+.card p {
+    color: rgb(82, 26, 134);
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.card span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/*.card img {
+    max-width: 50%;
+    height: 75px;
+    float: right;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}*/
+
+/* selector de id */
+#card-destacada {
+    border-left: 6px solid rgb(125, 39, 206);
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+/* ej. 7 - tarjetas en fila y modelo de caja */
+.contenedor-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    max-width: 960px;
+}
+
+/* ej. 8 - barra de navegación con flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0, 197, 197, 0.26);
+}
+
+.logo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(125, 39, 206);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(82, 26, 134);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: 1000;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(125, 39, 206);
+}
+
+/* ej. 9 - galería flex-wrap */
+.seccion-galeria {
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.seccion-galeria h2 {
+    margin-bottom: 20px;
+}
+
+/* contenedor flex: flex-wrap y gap */
+.contenedor-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* tarjetas con tamaño flexible: flex-grow y flex-basis */
+.card-producto {
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 260px;
+    max-width: 310px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 197, 197, 0.26);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.producto-titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: rgb(82, 26, 134);
+    margin-bottom: 8px;
+}
+
+.producto-precio {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(125, 39, 206);
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background-color: rgb(125, 39, 206);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-comprar:hover {
+    background-color: rgb(82, 26, 134);
+    transform: translateY(-2px);
+}
+
+/* ej. 10 - grid */
+
+/* grid */
+.layout-grid {
+    display: grid;
+    grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* header */
+.layout-header {
+    grid-area: header;
+}
+
+/* sidebar */
+.layout-sidebar {
+    grid-area: sidebar;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 197, 197, 0.26);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+}
+
+.layout-sidebar h3 {
+    font-size: 18px;
+    color: rgb(82, 26, 134);
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid rgb(125, 39, 206);
+    padding-bottom: 8px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: rgb(45, 15, 73);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+    background-color: rgba(125, 39, 206, 0.15);
+    color: rgb(125, 39, 206);
+}
+
+.sidebar-card {
+    background-color: rgba(125, 39, 206, 0.1);
+    border-left: 4px solid rgb(125, 39, 206);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.sidebar-card h4 {
+    font-size: 15px;
+    color: rgb(82, 26, 134);
+    margin-bottom: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar-card p {
+    font-size: 13px;
+    color: rgb(45, 15, 73);
+    text-align: left;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* principal */
+.layout-main {
+    grid-area: main;
+    min-width: 0;
+}
+
+/* footer */
+.layout-footer {
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 197, 197, 0.26);
+}
+
+.layout-footer p {
+    font-size: 14px;
+    color: rgb(82, 26, 134);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ej. 11 - pseudo-clases y pseudo-elementos */
+.seccion-links {
+    margin: 30px 0;
+}
+
+.seccion-links h2 {
+    margin-bottom: 15px;
+}
+
+.lista-recursos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-recursos li {
+    border-bottom: 1px solid rgba(125, 39, 206, 0.15);
+}
+
+/* ::before: */
+.lista-recursos li::before {
+    content: "▶";
+    color: rgb(125, 39, 206);
+    font-size: 11px;
+    margin-right: 8px;
+}
+
+/* :nth-child(even): */
+.lista-recursos li:nth-child(even) {
+    background-color: rgba(145, 152, 229, 0.12);
+}
+
+/* :nth-child(odd): */
+.lista-recursos li:nth-child(odd) {
+    background-color: rgba(200, 143, 207, 0.08);
+}
+
+/* enlace base */
+.lista-recursos a {
+    display: inline-block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: rgb(45, 15, 73);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+/* :hover: */
+.lista-recursos a:hover {
+    color: rgb(125, 39, 206);
+    background-color: rgba(125, 39, 206, 0.1);
+    padding-left: 20px;
+}
+
+/* :hover::before: */
+.lista-recursos li:hover::before {
+    content: "►";
+    color: rgb(82, 26, 134);
+}
+
+/* ej. 12 - position:fixed, position:absolute, z-index */
+
+/* botón fijo "volver arriba" */
+.btn-volver-arriba {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    background-color: rgb(125, 39, 206);
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: block;
+}
+
+.btn-volver-arriba:hover {
+    background-color: rgb(82, 26, 134);
+    transform: translateY(-4px);
+}
+
+/* contenedor de tooltip: position:relative para anclarlo */
+.tooltip-padre {
+    position: relative;
+}
+
+/* tooltip oculto default */
+.tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: rgb(45, 15, 73);
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    max-width: 260px;
+    white-space: normal;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    /* oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+}
+
+/* flecha del tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgb(45, 15, 73) transparent transparent transparent;
+}
+
+/* mostrar tooltip al hacer hover sobre el padre */
+.tooltip-padre:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ej. 15 - responsive layout (desktop-first) */
+
+/* breakpoint 1: tablets y pantallas intermedias */
+@media (max-width: 1024px) {
+    .layout-grid {
+        grid-template-columns: 200px 1fr;
+        gap: 15px;
+    }
+
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+}
+
+/* breakpoint 2: pantallas menores a 768px */
+@media (max-width: 768px) {
+    .layout-sidebar {
+        display: none;
+    }
+
+    .layout-grid {
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contenedor-cards {
+        padding: 0 5px;
+    }
+
+    .card-producto {
+        flex-basis: 100%;
+        max-width: 350px;
+    }
+}
+
+/* breakpoint 3: móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .btn-volver-arriba {
+        right: 15px;
+        bottom: 15px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 18px;
+    }
+
+    .tooltip {
+        max-width: 200px;
+        font-size: 12px;
+    }
+}

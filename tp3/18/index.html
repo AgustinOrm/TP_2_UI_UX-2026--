@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/gif" href="../media/favicon.gif">
+  <link rel="stylesheet" href="styles.css" />
+  <title>El jarwer (ej. 18)</title>
+</head>
+
+<body>
+  <!-- ej. 10 - layout grid -->
+  <div class="layout-grid">
+
+    <header class="layout-header">
+      <!-- ej. 8 / ej. 17 - barra de navegación con menú responsive sin js -->
+      <nav class="navbar">
+        <a href="#" class="logo">el harwauarae</a>
+
+        <!-- checkbox oculto y label asociado (accesibilidad) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Abrir o cerrar menú de navegación">
+        <label for="menu-toggle" class="menu-icono" aria-label="Menú">☰</label>
+
+        <ul class="nav-links">
+          <li><a href="#inicio">inicio</a></li>
+          <li><a href="#componentes">componentes</a></li>
+          <li><a href="#galeria">galería</a></li>
+          <li><a href="#contacto">contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h1>EL jardgüeuer</h1>
+      </div>
+      <h2>la parte dura de la comptuadoa</h2>
+    </header>
+
+    <!-- sidebar -->
+    <aside class="layout-sidebar">
+      <h3>categorías</h3>
+      <ul class="sidebar-links">
+        <li><a href="#componentes">procesadores</a></li>
+        <li><a href="#componentes">memorias RAM</a></li>
+        <li><a href="#componentes">placas de video</a></li>
+        <li><a href="#galeria">almacenamiento</a></li>
+        <li><a href="#galeria">fuentes</a></li>
+        <li><a href="#galeria">gabinetes</a></li>
+      </ul>
+
+      <div class="sidebar-card">
+        <h4>destacados</h4>
+        <p>envíos gratis a todo el país en compras superiores a $1.</p>
+      </div>
+    </aside>
+
+    <!-- contenido principal -->
+    <main class="layout-main">
+      <p>el garduerg es la parte dura de la computadora</p>
+      <div>
+        <figure>
+          <img class="picmain" src="../media/imagen.gif" alt="Daitaku Helios del videojuego Umamusume: Pretty Derby"
+            width="200">
+        </figure>
+      </div>
+
+      <div class="contenedor-cards">
+        <!-- ej. 12: contenedor padre con position:relative para el tooltip -->
+        <div class="card tooltip-padre">
+          <p>Unidad de procesamiento: <span class="tag">CPU</span></p>
+          <span>Ejecuta las instrucciones de los programas.</span>
+          <span class="tooltip">El cerebro del sistema: ejecuta miles de millones de operaciones por segundo.</span>
+        </div>
+        <div class="card" id="card-destacada">
+          <p>Memoria principal: <span class="tag">RAM</span></p>
+          <span>Almacena temporalmente los datos en uso.</span>
+        </div>
+        <div class="card">
+          <p>Procesamiento gráfico: <span class="tag">GPU</span></p>
+          <span>Renderiza gráficos e imágenes en pantalla.</span>
+        </div>
+      </div>
+
+      <!-- ej. 9 - galería de productos -->
+      <section id="galeria" class="seccion-galeria">
+        <h2>galería de productos</h2>
+        <div class="contenedor-galeria">
+
+          <article class="card-producto">
+            <img src="../media/astgenne.gif" alt="Procesador Intel Core i12" class="producto-img">
+            <h3 class="producto-titulo">Procesador Intel Core i12</h3>
+            <p class="producto-precio">$Mucho</p>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </article>
+
+          <article class="card-producto">
+            <img src="../media/astgenne.gif" alt="Memoria RAM 67GB DDR9" class="producto-img">
+            <h3 class="producto-titulo">Memoria RAM 67GB DDR9</h3>
+            <p class="producto-precio">$Un ojo de la cara</p>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </article>
+
+          <article class="card-producto">
+            <img src="../media/astgenne.gif" alt="Placa de video RTX 9090" class="producto-img">
+            <h3 class="producto-titulo">Placa de video RTX 9090</h3>
+            <p class="producto-precio">$Los dos ojos de la cara</p>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </article>
+
+          <article class="card-producto">
+            <img src="../media/astgenne.gif" alt="Disco SSD NVMe 420TB" class="producto-img">
+            <h3 class="producto-titulo">Disco SSD NVMe 420TB</h3>
+            <p class="producto-precio">$Bastante</p>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </article>
+
+          <article class="card-producto">
+            <img src="../media/astgenne.gif" alt="Fuente 1337W 80 Plus Platinum" class="producto-img">
+            <h3 class="producto-titulo">Fuente 1337W 80+ Platinum</h3>
+            <p class="producto-precio">$Un brazo y una pierna</p>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </article>
+
+          <article class="card-producto">
+            <img src="../media/astgenne.gif" alt="Gabinete gamer RGB ATX" class="producto-img">
+            <h3 class="producto-titulo">Gabinete gamer RGB ATX</h3>
+            <p class="producto-precio">$Algo</p>
+            <button type="button" class="btn-comprar">Comprar</button>
+          </article>
+
+        </div>
+        <!-- spinner de carga -->
+        <div class="contenedor-spinner">
+          <div class="spinner"></div>
+          <p>cargando más productos...</p>
+        </div>
+      </section>
+
+      <!-- ej. 18 - galería de imágenes desiguales con grid dense -->
+      <section class="seccion-mosaico">
+        <h2>mosaico de componentes</h2>
+        <div class="galeria-mosaico">
+          <!-- elemento destacado que ocupa 2 columnas y 2 filas -->
+          <div class="item-mosaico item-destacado">
+            <img src="../media/astgenne.gif" alt="Componente principal">
+          </div>
+          <div class="item-mosaico">
+            <img src="../media/astgenne.gif" alt="Componente 1">
+          </div>
+          <div class="item-mosaico item-alto">
+            <img src="../media/astgenne.gif" alt="Componente 2">
+          </div>
+          <div class="item-mosaico item-ancho">
+            <img src="../media/astgenne.gif" alt="Componente 3">
+          </div>
+          <div class="item-mosaico">
+            <img src="../media/astgenne.gif" alt="Componente 4">
+          </div>
+          <div class="item-mosaico">
+            <img src="../media/astgenne.gif" alt="Componente 5">
+          </div>
+          <div class="item-mosaico item-ancho">
+            <img src="../media/astgenne.gif" alt="Componente 6">
+          </div>
+        </div>
+      </section>
+
+      <!-- ej. 11 - pseudo-clases y pseudo-elementos en lista de enlaces -->
+      <section class="seccion-links" id="componentes">
+        <h2>recursos de hardware</h2>
+        <ul class="lista-recursos">
+          <li><a href="https://www.intel.com" target="_blank" rel="noopener noreferrer">Intel – procesadores</a></li>
+          <li><a href="https://www.amd.com" target="_blank" rel="noopener noreferrer">AMD – cpus y gpus</a></li>
+          <li><a href="https://www.nvidia.com" target="_blank" rel="noopener noreferrer">NVIDIA – placas de video</a>
+          </li>
+          <li><a href="https://www.corsair.com" target="_blank" rel="noopener noreferrer">Corsair – memorias y
+              fuentes</a></li>
+          <li><a href="https://www.samsung.com" target="_blank" rel="noopener noreferrer">Samsung – almacenamiento
+              ssd</a></li>
+          <li><a href="https://www.asus.com" target="_blank" rel="noopener noreferrer">ASUS – motherboards y
+              periféricos</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="layout-footer">
+      <p>&copy; 2026 hel arwauarwur</p>
+    </footer>
+
+  </div>
+
+  <!-- ej. 12: botón fijo, position:fixed -->
+  <a href="#" class="btn-volver-arriba" aria-label="Volver al inicio de la página">⬆︎</a>
+
+</body>
+
+</html>
